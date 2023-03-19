@@ -1,0 +1,52 @@
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --type-writer-speed:6s
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', system-ui;
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-weight: 200;
+    position: relative;
+    border: 1px solid red;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+
+}
+
+h1::before {
+    background: teal;
+    animation: typewriter var(--type-writer-speed) steps(24) 1s forwards;
+    background: var(--bg-color);
+}
+h1::after{
+    width: .08em;
+    background: black;
+    animation:
+            typewriter var(--type-writer-speed) steps(24) 1s forwards,
+    blink 500ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%
+    }
+}
+@keyframes blink {
+    to{
+        background: transparent;
+    }
+}
