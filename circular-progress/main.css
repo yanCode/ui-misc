@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=PPoins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #880bea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    padding: 50px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.progress-circular {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#880bea 25%, #ededed 0);
+    display: grid;
+    place-items: center;
+}
+
+.progress-circular::after {
+    position: absolute;
+    content: ' ';
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+
+.progress-circular .value-container {
+    font-size: 60px;
+    font-weight: 600;
+    color: #880bea;
+    z-index: 3;
+}
+
+.text {
+    font-size: 25px;
+    font-weight: 600;
+    color: #880bea;
+    margin: 20px 0;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+}
+
+.btn input {
+    position: relative;
+    width: 100%;
+    padding: 3px 10px;
+    height: 50px;
+    border: 1px solid #880bea;
+    outline: none;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #880bea;
+}
+
+.btn button {
+    border-radius: 0 0 10px 10px;
+    outline: none;
+    background: #880bea;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+.btn button:active{
+    color: #880bea;
+}
+.percent{
+    font-size: 16px;
+    vertical-align: top;
+}
